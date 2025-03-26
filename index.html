@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-gray-950 font-[quicksand]">
+    <!-- Navbar -->
+    <nav>
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <img class="w-[50px]" src="images/logo.png" alt="logo image">
+
+            <!-- Mobile Menu (Hidden by default) -->
+            <div class="md:hidden">
+                <input type="checkbox" id="menu-toggle" class="peer hidden">
+                <label for="menu-toggle" class="text-2xl cursor-pointer">&#9776;</label>
+
+                <!-- Mobile Menu -->
+                <div class="hidden peer-checked:block absolute top-16 left-0 w-full shadow-md">
+                    <ul class="space-y-4 py-4 px-6">
+                        <li><a href="#about" class="font-medium hover:text-teal-500 block">About</a></li>
+                        <li><a href="#projects" class="font-medium hover:text-teal-500 block">Projects</a></li>
+                        <li><a href="#contact" class="font-medium hover:text-teal-500 block">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul id="nav-links" class="text-lg hidden space-x-6 md:flex">
+                <li><a href="#about" class="font-medium hover:text-teal-500">About</a></li>
+                <li><a href="#projects" class="font-medium hover:text-teal-500">Projects</a></li>
+                <li><a href="#contact" class="font-medium hover:text-teal-500">Contact</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-[url(./images/background-sm.svg)] md:bg-[url(./images/background-lg.svg)] lg:bg-[url(./images/background-lg.svg)] bg-no-repeat bg-center bg-cover text-center px-6 pt-64 pb-80 md:pt-[220px] md:pb-[280px]">
+        <h1 class="text-5xl font-bold lg:text-6xl">Hi, I'm Andrea</h1>
+        <p class="text-lg mt-6 font-medium">I'm a Master degree student specializing in AI, ML and Web Development.</p>
+        <a href="#projects" class="text-lg font-medium mt-6 inline-block bg-teal-400 text-white px-6 py-3 rounded-lg shadow-md transition duration-150 ease-in-out hover:scale-110 hover:bg-teal-500">
+            View My Work
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gradient-to-b from-teal-500 via-teal-300 via-15% to-white to-60% pt-16 pb-20 px-6 lg:px-40">
+        <h2 class="text-4xl font-bold text-teal-100 ml-4 md:text-center lg:text-center">About Me</h2>
+        <div class="mt-10 grid justify-items-start items-center gap-x-2 gap-y-8 md:gap-y-10 md:justify-items-center lg:grid-cols-3 lg:gap-y-16">
+            <img class="w-80 rounded-3xl md:order-1 lg:order-1 lg:justify-self-start" src="images/propic.png" alt="profile-picture">
+            <p class="text-lg text-left font-medium mt-4 md:order-2 lg:order-2 lg:col-span-2 lg:text-xl">
+                                My name is Andrea Galasso. I am a student currently
+                                completing my Master’s Degree program in Computer Engineering
+                                with a specialization in AI and Data Science at
+                                Politecnico di Bari.
+                                During my studies, I have gained strong competencies
+                                in several fields, especially artificial intelligence,
+                                working on academic projects related to recommendation systems
+                                and Graph Neural Networks (GNNs).
+                                I also have a solid theoretical understanding of major blockchain
+                                technologies.
+                                Despite my analytical background, I am a highly creative person
+                                and I've found in web design and web development
+                                a way to express my creativity.
+                                I'm always open to new opportunities!
+            </p>
+            <img class="w-80 rounded-3xl md:order-3 lg:justify-self-center lg:order-4" src="images/guitar.png" alt="guitar image">
+            <p class="text-lg text-left font-medium md:order-4 lg:order-3 lg:text-xl">
+                    During my freetime I like to do a lot of things. 
+                    Music is my number one hobby. I listen to a lot of music every day,
+                    exploring always new genres and discovering always something new.
+                    I’m also a beginner guitarist and I enjoy practicing a bit every day,
+                    trying to learn always new songs and techniques.
+                    To keep myself in good shape and health, I train at home 3 times a week
+                    balancing my workouts with strength, mobility and stretching exercises.
+                    In the weekend I usually go out for a walk.
+                    I also try to organize my meals to eat healthy most of the time.                    
+            </p>
+            <img class="w-96 rounded-3xl md:order-5 lg:order-5" src="images/fitness.png" alt="fitness equipment image">
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-[url(./images/background-sm.svg)] md:bg-[url(./images/background-lg.svg)] lg:bg-[url(./images/background-lg.svg)] bg-no-repeat bg-center bg-cover pt-16 pb-24 px-6 bg-teal-50">
+        <h2 class="text-4xl font-bold text-center">Some of my projects</h2>
+        <div class="mt-6 grid gap-6 items-start md:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img class="mb-4" src="images/happy-calculator.PNG" alt="happy calculator screenshot">
+                <p class="text-gray-500 mb-2">Web Development</p>
+                <h3 class="text-xl font-semibold">Happy Calculator</h3>
+                <p class="text-gray-600 mt-2">A simple calculator app that does basic operations, fully responsive, with a particular focus on the design.</p>
+                <a href="https://galassoandrea.github.io/happy-calculator/" class="text-teal-500 mt-4 block hover:text-teal-600">View Project →</a>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img class="mb-4" src="images/cooking.PNG" alt="happy calculator screenshot">
+                <p class="text-gray-500 mb-2">Web Development</p>
+                <h3 class="text-xl font-semibold">CooKing landing page</h3>
+                <p class="text-gray-600 mt-2">Landing page for a food social network that I've built for an exam.</p>
+                <a href="https://galassoandrea.github.io/CooKing-landing-page/" class="text-teal-500 mt-4 block hover:text-teal-600">View Project →</a>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img class="mb-4" src="images/yugioh-recommender.PNG" alt="example yu-gi-oh recommendation">
+                <p class="text-gray-500 mb-2">Artificial Intelligence</p>
+                <h3 class="text-xl font-semibold">Yu-gi-oh cards recommendation with Autoencoder</h3>
+                <p class="text-gray-600 mt-2">An autoencoder-based recommender system for yu-gi-oh cards implemented, trained and tested by myself.</p>
+                <a href="https://www.kaggle.com/code/andreagalasso99/yu-gi-oh-cards-recommendation" class="text-teal-500 mt-4 block hover:text-teal-600">View Project →</a>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <img class="mb-4" src="images/poi-recommender.PNG" alt="example itinerary recommendation">
+                <p class="text-gray-500 mb-2">Artificial Intelligence</p>
+                <h3 class="text-xl font-semibold">GNNs for POI recommendation</h3>
+                <p class="text-gray-600 mt-2">A GNN-based recommender system implemented, trained and tested by me for the task of POI itnerary recommendation.</p>
+                <a href="https://github.com/galassoandrea/GNN-POI-recommendation" class="text-teal-500 mt-4 block hover:text-teal-600">View Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-teal-500 py-16 px-6 text-center">
+        <h2 class="text-4xl font-bold text-teal-100">Contact Me</h2>
+        <p class="text-lg text-teal-50 mt-6">Feel free to reach out for collaborations or just a chat!</p>
+        <div class="mt-4 space-x-4">
+            <a href="https://github.com/galassoandrea" class="text-lg font-medium text-white hover:text-teal-100">GitHub</a>
+            <a href="https://www.linkedin.com/in/andrea-galasso-751798167" class="text-lg font-medium text-white hover:text-teal-100">LinkedIn</a>
+            <a href="mailto:galassoandrea99@gmail.com" class="text-lg text-white font-medium hover:text-teal-100">Email</a>
+        </div>
+    </section>
+
+</body>
+</html>
